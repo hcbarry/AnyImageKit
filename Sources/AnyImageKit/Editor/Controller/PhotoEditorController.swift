@@ -14,7 +14,7 @@ protocol PhotoEditorControllerDelegate: AnyObject {
     func photoEditor(_ editor: PhotoEditorController, didFinishEditing photo: UIImage, isEdited: Bool)
 }
 
-final class PhotoEditorController: AnyImageViewController {
+public final class PhotoEditorController: AnyImageViewController {
     
     private lazy var contentView: PhotoEditorContentView = {
         let view = PhotoEditorContentView(frame: self.view.bounds, image: image, context: context)
@@ -57,7 +57,7 @@ final class PhotoEditorController: AnyImageViewController {
         return stack
     }()
     
-    public init(photo resource: EditorPhotoResource, options: EditorPhotoOptionsInfo, delegate: PhotoEditorControllerDelegate) {
+    init(photo resource: EditorPhotoResource, options: EditorPhotoOptionsInfo, delegate: PhotoEditorControllerDelegate) {
         self.resource = resource
         self.options = options
         self.context = .init(options: options)
