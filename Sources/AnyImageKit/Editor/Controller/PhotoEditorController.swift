@@ -57,7 +57,7 @@ final class PhotoEditorController: AnyImageViewController {
         return stack
     }()
     
-    init(photo resource: EditorPhotoResource, options: EditorPhotoOptionsInfo, delegate: PhotoEditorControllerDelegate) {
+    public init(photo resource: EditorPhotoResource, options: EditorPhotoOptionsInfo, delegate: PhotoEditorControllerDelegate) {
         self.resource = resource
         self.options = options
         self.context = .init(options: options)
