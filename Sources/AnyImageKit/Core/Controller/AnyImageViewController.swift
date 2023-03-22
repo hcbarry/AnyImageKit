@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AnyImageViewController: UIViewController {
+open class AnyImageViewController: UIViewController {
     
     private var page: AnyImagePage = .undefined
     private var isStatusBarHidden: Bool = false {
