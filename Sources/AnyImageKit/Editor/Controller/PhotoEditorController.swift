@@ -69,14 +69,14 @@ public final class PhotoEditorController: AnyImageViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         bindAction()
         loadData()
         navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewWillLayoutSubviews() {
+    public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         showHUDIfNeeded()
         toolView.hiddenToolBarIfNeeded()
@@ -175,7 +175,7 @@ public final class PhotoEditorController: AnyImageViewController {
         }
     }
     
-    override var prefersStatusBarHidden: Bool {
+    public override var prefersStatusBarHidden: Bool {
         return true
     }
 }
