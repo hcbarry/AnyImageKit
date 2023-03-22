@@ -212,11 +212,11 @@ extension ImageEditorController {
 // MARK: - PhotoEditorControllerDelegate
 extension ImageEditorController: PhotoEditorControllerDelegate {
     
-    func photoEditorDidCancel(_ editor: PhotoEditorController) {
+    public func photoEditorDidCancel(_ editor: PhotoEditorController) {
         editorDelegate?.imageEditorDidCancel(self)
     }
     
-    func photoEditor(_ editor: PhotoEditorController, didFinishEditing photo: UIImage, isEdited: Bool) {
+    public func photoEditor(_ editor: PhotoEditorController, didFinishEditing photo: UIImage, isEdited: Bool) {
         let outputResult = output(photo: photo, fileType: .jpeg)
         switch outputResult {
         case .success(let url):
